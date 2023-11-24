@@ -23,7 +23,7 @@ Using components I already had laying around I created a controller that is easi
   - AM2303/DHT22 Temperature/Humidity Sensor
   - 10k Ohm Resistor (unless your AM2302/DHT22 has one built in
   - 5v relay bank (I'm using a bank of 8 but the program only uses 6 as of right now)
-  - Jumper cables
+  - Jumper wires
   - 14/2 romex/housing wire
   - (3) 15amp outlets
   - Wires to connect the sensor to the Pi (I'm using come Cat5e cable I had laying around)
