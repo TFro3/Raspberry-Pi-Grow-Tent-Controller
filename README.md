@@ -69,4 +69,18 @@ pump_enabled = True  # Change to True or False
 Notice there is no variable for an _air conditioner_. For me I do not need this option since my tent is in my basement which is always far cooler and don't feel its necessary to incorporate an air conditioning unit here. These relays can only handle so much power as well and don't want to push their limits. If you need an air conditioning unit then you can always get one that has it's own thermostat and set it according to your needs.
 
 
+**Hardware Setup:**
+
+The GPIO pins used and their corresponding variables are listed below for relay use. We will be using GPIO pins 14, 15, 18, 23, 24, and 25 that need to be connected to the 5v relay's using your jumper wires.
+```python
+# Define pin numbers
+LIGHTS_PIN = 14
+FAN_PIN = 15
+HUMIDIFIER_PIN = 18
+HEATER_PIN = 23
+DEHUMIDIFIER_PIN = 24
+PUMP_PIN = 25
+```
+
+
 
