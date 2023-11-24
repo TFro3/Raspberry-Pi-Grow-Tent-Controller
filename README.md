@@ -20,8 +20,8 @@ Using components I already had laying around I created a controller that is easi
 
 **For this project you will need the following:**
   - Raspberry Pi (I'm using a Raspberry Pi Zero W)
-  - AM3203/DHT22 Temperature/Humidity Sensor
-  - 10k Ohm Resistor (unless your AM3202/DHT22 has one built in
+  - AM2303/DHT22 Temperature/Humidity Sensor
+  - 10k Ohm Resistor (unless your AM2302/DHT22 has one built in
   - 5v relay bank (I'm using a bank of 8 but the program only uses 6 as of right now)
   - Jumper cables
   - 14/2 romex/housing wire
