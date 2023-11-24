@@ -49,7 +49,7 @@ Humidity_Threshold_Humidifier = 50  # Change to your desired humidity threshold 
 Humidity_Threshold_Dehumidifier = 75  # Change to your desired humidity threshold in percentage
 ```
 
-Here you can how often you want the pump to run and for how long.
+Here you can set how often you want the pump to run and for how long.
 ```python
 # Define pump runtime and interval (in seconds)
 pump_runtime = 90  # Change to your desired pump runtime in seconds
