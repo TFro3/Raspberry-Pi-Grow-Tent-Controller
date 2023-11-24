@@ -39,7 +39,7 @@ lights_on_time = datetime.datetime.strptime('6:00 AM', '%I:%M %p').time()  # Cha
 lights_off_time = datetime.datetime.strptime('10:00 PM', '%I:%M %p').time()  # Change to your desired off time
 ```
 
-You can set the desired temperature and humidity thresholds which will trigger the relays based off the sensor readings every 60 seconds
+You can set the desired temperature and humidity thresholds which will trigger the relays based off the sensor readings.
 ```python
 # Define temperature and humidity thresholds
 Temperature_Threshold_Fan = 80  # Change to your desired temperature threshold in Fahrenheit
@@ -66,6 +66,7 @@ heater_enabled = True  # Change to True or False
 dehumidifier_enabled = True  # Change to True or False
 pump_enabled = True  # Change to True or False
 ```
+Notice there is no variable for an _air conditioner_. For me I do not need this option since my tent is in my basement which is always far cooler and don't feel its necessary to incorporate an air conditioning unit here. These relays can only handle so much power as well and don't want to push their limits. If you need an air conditioning unit then you can always get one that has it's own thermostat and set it according to your needs.
 
 
 
