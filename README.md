@@ -56,7 +56,7 @@ pump_runtime = 90  # Change to your desired pump runtime in seconds
 pump_interval = 600  # Change to your desired pump interval in seconds
 ```
 
-If you're not using a particular appliance/relat you can simply change the value from "True" to "False". If set to False, the program will ignore that logic as well as print "Disabled" on the device status output to remind/tell you that the device is disabled.
+If you're not using a particular appliance/relay you can simply change the value from "True" to "False". If set to False, the program will ignore that logic as well as print "Disabled" on the device status output to remind/tell you that the device is disabled.
 ```python
 # Define appliance control flags (True: Enabled, False: Disabled)
 lights_enabled = True  # Change to True or False
