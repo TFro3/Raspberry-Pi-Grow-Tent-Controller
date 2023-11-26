@@ -1,4 +1,7 @@
 # Raspberry-Pi-Grow-Tent-Controller
+
+****-WORK IN PROGRESS WRITEUP AS THIS IS BEING DEVELOPED AND TESTED. CODE WILL BE UPLOADED ONCE COMPLETE-****
+
 Raspberry Pi based grow controller for your grow tent/room. Utilizing temperature &amp; humidity sensor and relays to help automate grows and save you from having to buy another expensive device.
 
 **The problem (for me) I'm solving:** 
