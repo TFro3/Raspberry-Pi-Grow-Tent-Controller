@@ -87,3 +87,29 @@ PUMP_PIN = 25
 
 
 
+> [!CAUTION]
+> **Disclaimer:**
+> 
+> -  This project involves working with electrical circuits and high voltage components. Incorrect wiring or handling of high voltage lines can pose serious risks of electric shock or fire hazards. It's crucial to follow proper safety precautions and guidelines when working with high voltage.
+> 
+> **Safety Recommendations**
+>
+> - Qualified Personnel: It's strongly advised to involve or consult with qualified personnel or electricians when dealing with high voltage lines.
+> 
+> - Disconnect Power: Always disconnect power sources before working on electrical circuits.
+> 
+> - Insulation: Ensure proper insulation of wires and components to prevent accidental contact with live circuits.
+> 
+> - Proper Wiring: Follow manufacturer instructions and local electrical codes when wiring high voltage lines.
+> 
+> - Use Enclosures: Enclose circuits in suitable cases to prevent accidental contact.
+> 
+> - Safety Gear: Wear appropriate safety gear, such as gloves and goggles, when handling electrical components.
+> 
+>
+> **Liability Statement**
+>
+> - The creators or contributors of this project do not accept any liability or responsibility for any damages, accidents, injuries, or losses resulting from the use, misuse, or inability to use the information or instructions provided in this project. Users assume all risks associated with handling high voltage circuits and should exercise caution and expertise when working on such systems.
+
+
+Have fun and enjoy!
