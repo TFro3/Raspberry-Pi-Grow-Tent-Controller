@@ -21,8 +21,9 @@ lights_on_time = datetime.datetime.strptime('6:00 AM', '%I:%M %p').time()  # Cha
 lights_off_time = datetime.datetime.strptime('10:00 PM', '%I:%M %p').time()  # Change to your desired off time
 
 # Define pump runtime and interval (in seconds)
-pump_runtime = 90  # Change to your desired pump runtime in seconds
-pump_interval = 600  # Change to your desired pump interval in seconds
+pump_runtime = 90  # Change to your desired pump runtime in seconds (90 seconds = 1.5 minutes)
+pump_interval = 600  # Change to your desired pump interval in seconds (600 seconds = 10 minutes)
+#Example: if you set the pump_interval = 600 and pump_runtime = 90, then the pump(s) will turn on every 600 seconds, for a duration of 90 seconds)
 
 # Define temperature and humidity thresholds
 Temperature_Threshold_Fan = 75  # Will turn on Fan if temperature in Fahrenheit (F) is above this value.
