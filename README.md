@@ -4,6 +4,7 @@
 > Current Work In Progress:
 > - OLED display that will show current temp, humidity, and status of relays
 > - Installation video/walk-through
+> - Photo's/screenshots of the setup
 
 Raspberry Pi based grow controller for your grow tent/room. Utilizing temperature &amp; humidity sensor and relays to help automate grows and save you from having to buy another expensive device.
 
