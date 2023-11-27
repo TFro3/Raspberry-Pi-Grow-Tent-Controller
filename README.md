@@ -1,19 +1,21 @@
 # Raspberry-Pi-Grow-Tent-Controller
 
 > [!NOTE]
-> WORK IN PROGRESS WRITEUP AS THIS IS BEING DEVELOPED AND TESTED. CODE WILL BE UPLOADED ONCE COMPLETE
+> Current Work In Progress:
+> - OLED display that will show current temp, humidity, and status of relays
+> - Installation video/walk-through
 
 Raspberry Pi based grow controller for your grow tent/room. Utilizing temperature &amp; humidity sensor and relays to help automate grows and save you from having to buy another expensive device.
 
-**The problem (for me) I'm solving:** 
+<h3>The problem (for me) I'm solving:</h3>
 
 All the grow tent controllers I've come across require you to use their fans, lights, etc for everything to work out of the box OR purchase an additional adapter to convert their proprietary plugs to a standard outlet so you can use your own devices. 
 
-**My Solution/Features:** 
+<h3>My Solution/Features</h3> 
 
 Using components I already had laying around I created a controller that is easily configurable to your needs. Even if you have to purchase all items to build you'll still be saving money.
 
-**You'll be able to control the following:**
+<h3>You'll be able to control the following</h3>
 
 1. Lights (Based on time schedule in the 12 hour clock format)
 2. Exhuast Fan (Based on Sensor readings)
@@ -22,19 +24,18 @@ Using components I already had laying around I created a controller that is easi
 5. Water Pump (Based on a set interval schedule) 
 
 
-**For this project you will need the following:**
+<h3>For this project you will need the following</h3>
   - Raspberry Pi (I'm using a Raspberry Pi Zero W)
   - AM2303/DHT22 Temperature/Humidity Sensor
-  - 10k Ohm Resistor (unless your AM2302/DHT22 has one built in
+  - 10k Ohm Resistor (unless your AM2302/DHT22 has one built in. Mine has it built in so research the wiring diagram if you need to wire that resistor in)
   - 5v relay bank (I'm using a bank of 8 but the program only uses 6 as of right now)
   - Jumper wires
   - 14/2 romex/housing wire
   - (3) 15amp outlets
   - Wires to connect the sensor to the Pi (I'm using come Cat5e cable I had laying around)
   - Some sort of box to house the Pi, relay(s), and outlets
-  - OPTIONAL: OLED display that will show current temp, humidity, and status of relays
-
-**You can edit the following to customize to your needs:**
+  
+<h3>You can edit the following to customize to your needs</h3>
 
 Simply input the time you want the lights to turn on and off at.
 ```python
@@ -73,9 +74,9 @@ pump_enabled = True  # Change to True or False
 Notice there is no variable for an _air conditioner_. For me I do not need this option since my tent is in my basement which is always far cooler and don't feel its necessary to incorporate an air conditioning unit here. These relays can only handle so much power as well and don't want to push their limits. If you need an air conditioning unit then you can always get one that has it's own thermostat and set it according to your needs.
 
 
-**Hardware Setup:**
+<h3>Hardware Setup</h3>
 
-The GPIO pins used and their corresponding variables are listed below for relay use. We will be using GPIO pins 14, 15, 18, 23, 24, and 25 that need to be connected to the 5v relay's using your jumper wires.
+The GPIO pins used and their corresponding variables are listed below for relay use. We will be using GPIO pins 14, 15, 18, 23, 24, and 25 that need to be connected to the 5v relay's using your jumper wires. You'll then connect GPIO 17 to your DHT22 sensor DATA terminal. Once that is complete you need to connect your DHT22 to an open 5v power pin as well as Ground pin. In my case, I chose GPIO-2 for the 5v power and GPIO-6 for Ground.
 ```python
 # Define pin numbers
 LIGHTS_PIN = 14
@@ -84,7 +85,53 @@ HUMIDIFIER_PIN = 18
 HEATER_PIN = 23
 DEHUMIDIFIER_PIN = 24
 PUMP_PIN = 25
+SENSOR_PIN = 17  # DHT22 sensor
 ```
+
+Now let's pull down code from GitHub to our Pi's by running the following:
+
+- Run the command ```cd``` to make sure you're not in any odd directories before pulling down the code.
+-  ```git clone https://github.com/TFro3/Raspberry-Pi-Grow-Tent-Controller.git```
+- Then cd into the directory by using ```cd Raspberry-Pi-Grow-Tent-Controller```
+
+<h3>Sensor Package Installation Options</h3> 
+
+> [!IMPORTANT]
+> There are 2 options here, read both and make a decision on which one to do BEFORE blindly running commands
+
+**Option 1:** Create an environment for the DHT22 sensor to work.
+-  ```python3 -m venv myenv```
+-  ```source myenv/bin/activate```
+- ```pip install Adafruit_DHT```
+
+If you chose this route, you will need to run the ```source myenv/bin/activate``` everytime you reboot your pi in the directory which you created it.
+
+--OR-- 
+
+**Option 2:** You can also use the pip function "--break-system-packages" to install it without needing to setup the environment. 
+- ```pip install Adafruit_DHT --break-system-packages```
+
+This is the easier route, but could potentially cause system issues? I think? Idk, this is the way I did it and it's working just fine.
+
+<h3>Usage</h3>
+
+- Once in the 'Raspberry-Pi-Grow-Tent-Controller' directory you'll the the GrowController.py file.
+- Run the following command ```chmod +x StartGrowController.sh``` to make the shell script executable 
+- Open the file by running ```nano GrowController.py```
+- Edit the temperature and humidity parameters along with the light schedule times and save when complete. (shown above in the examples)
+- The run ```python GrowController.py``` OR ```python3 GrowController.py``` if you have both Python2 and Python3 installed on your Pi.
+- Optional: run the command ```sudo nano /etc/rc.local``` and insert the following line between the 'fi' and 'exit 0' as shown below. This will run the GrowController.py at boot so if you reboot or close power it will run automatically once the Pi is running.
+```
+fi
+
+cd /home/pi/Raspberry-Pi-Grow-Tent-Controller
+./StartGrowController.sh &
+
+exit 0
+  ```
+- The save the file
+
+
 
 
 
