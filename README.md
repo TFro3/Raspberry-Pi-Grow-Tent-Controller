@@ -47,11 +47,11 @@ lights_off_time = datetime.datetime.strptime('10:00 PM', '%I:%M %p').time()  # C
 You can set the desired temperature and humidity thresholds which will trigger the relays based off the sensor readings.
 ```python
 # Define temperature and humidity thresholds
-Temperature_Threshold_Fan = 80  # Change to your desired temperature threshold in Fahrenheit
-Temperature_Threshold_Heat = 55  # Change to your desired temperature threshold in Fahrenheit
-Humidity_Threshold_Fan = 85  # Change to your desired humidity threshold in percentage
-Humidity_Threshold_Humidifier = 50  # Change to your desired humidity threshold in percentage
-Humidity_Threshold_Dehumidifier = 75  # Change to your desired humidity threshold in percentage
+Temperature_Threshold_Fan = 75  # Will turn on Fan if temperature in Fahrenheit (F) is above this value.
+Temperature_Threshold_Heat = 63  # Will turn on Heat if temperature in Fahrenheit (F) is below this value.
+Humidity_Threshold_Fan = 85  # Will turn on Fan once humidity is above this percentage (%) to try and move lower humidity air in. Disable this if humidity outside the tent/room is higher.
+Humidity_Threshold_Humidifier = 70  # Will turn on Humidifier once humidity is below this percentage (%).
+Humidity_Threshold_Dehumidifier = 80  # Will turn on Dehumidifier once humidity is above this percentage (%).
 ```
 
 Here you can set how often you want the pump to run and for how long.
@@ -88,12 +88,7 @@ PUMP_PIN = 25
 SENSOR_PIN = 17  # DHT22 sensor
 ```
 
-Now let's pull down code from GitHub to our Pi's by running the following:
-
-- Run the command ```cd``` to make sure you're not in any odd directories before pulling down the code.
--  ```git clone https://github.com/TFro3/Raspberry-Pi-Grow-Tent-Controller.git```
-- Then cd into the directory by using ```cd Raspberry-Pi-Grow-Tent-Controller```
-- Run the following command ```chmod +x StartGrowController.sh``` to make the shell script executable 
+<h2>Install Required Libraries and Pulling Down the Code</h2>
 
 <h3>Sensor Package Installation Options</h3> 
 
@@ -114,13 +109,16 @@ If you chose this route, you will need to run the ```source myenv/bin/activate``
 
 This is the easier route, but could potentially cause system issues? I think? Idk, this is the way I did it and it's working just fine.
 
-<h3>Usage</h3>
+<h3>Cloning the Repo to your Pi</h3>
 
-- Once in the 'Raspberry-Pi-Grow-Tent-Controller' directory you'll the the GrowController.py file.
-- Open the file by running ```nano GrowController.py```
-- Edit the temperature and humidity parameters along with the light schedule times and save when complete. (shown above in the examples)
-- The run ```python GrowController.py``` OR ```python3 GrowController.py``` if you have both Python2 and Python3 installed on your Pi.
-- Optional: run the command ```sudo nano /etc/rc.local``` and insert the following line between the 'fi' and 'exit 0' as shown below. This will run the GrowController.py at boot so if you reboot or close power it will run automatically once the Pi is running.
+Now let's pull down code from GitHub to our Pi's by running the following:
+
+- Run the command ```cd``` to make sure you're not in any odd directories before pulling down the code.
+-  ```git clone https://github.com/TFro3/Raspberry-Pi-Grow-Tent-Controller.git```
+- Then cd into the directory by using ```cd Raspberry-Pi-Grow-Tent-Controller```
+- Run the following command ```chmod +x StartGrowController.sh``` to make the shell script executable
+- You can now run ```./StartGrowController.sh``` **OR** ```python3 GrowController.py``` to start the controller!
+- **Optional:** run the command ```sudo nano /etc/rc.local``` and insert the following line between the 'fi' and 'exit 0' as shown below. This will run the GrowController.py at boot so if you reboot or close power it will run automatically once the Pi is running:
 ```
 fi
 
@@ -129,7 +127,44 @@ cd /home/pi/Raspberry-Pi-Grow-Tent-Controller
 
 exit 0
   ```
-- The save the file
+
+<h3>Usage</h3>
+
+- Once in the 'Raspberry-Pi-Grow-Tent-Controller' directory you'll the the GrowController.py file.
+- Open the file by running ```nano GrowController.py```
+- Edit the temperature and humidity parameters along with the light schedule times and save when complete. (shown above in the examples)
+```python3
+# ------------ You CAN edit values starting here ------------ #
+
+# Define lights on and off times (in 12-hour format with AM/PM)
+lights_on_time = datetime.datetime.strptime('6:00 AM', '%I:%M %p').time()  # Change to your desired on time
+lights_off_time = datetime.datetime.strptime('10:00 PM', '%I:%M %p').time()  # Change to your desired off time
+
+# Define pump runtime and interval (in seconds)
+pump_runtime = 90  # Change to your desired pump runtime in seconds
+pump_interval = 600  # Change to your desired pump interval in seconds
+
+# Define temperature and humidity thresholds
+Temperature_Threshold_Fan = 75  # Will turn on Fan if temperature in Fahrenheit (F) is above this value.
+Temperature_Threshold_Heat = 63  # Will turn on Heat if temperature in Fahrenheit (F) is below this value.
+Humidity_Threshold_Fan = 85  # Will turn on Fan once humidity is above this percentage (%) to try and move lower humidity air in. Disable this if humidity outside the tent/room is higher.
+Humidity_Threshold_Humidifier = 70  # Will turn on Humidifier once humidity is below this percentage (%).
+Humidity_Threshold_Dehumidifier = 80  # Will turn on Dehumidifier once humidity is above this percentage (%).
+
+# Define appliance control flags (True: Enabled, False: Disabled)
+lights_enabled = True  # Change to True or False
+fan_enabled = True  # Change to True or False
+humidifier_enabled = True  # Change to True or False
+heater_enabled = True  # Change to True or False
+dehumidifier_enabled = True  # Change to True or False
+pump_enabled = True  # Change to True or False
+
+# ------------ Do NOT edit values past here ------------ #
+```
+- The run ```python GrowController.py``` OR ```./StartGrowController.sh``` OR ```python3 GrowController.py``` if you have both Python2 and Python3 installed on your Pi.
+
+
+The save the file and you're all set!
 
 
 
