@@ -93,6 +93,7 @@ Now let's pull down code from GitHub to our Pi's by running the following:
 - Run the command ```cd``` to make sure you're not in any odd directories before pulling down the code.
 -  ```git clone https://github.com/TFro3/Raspberry-Pi-Grow-Tent-Controller.git```
 - Then cd into the directory by using ```cd Raspberry-Pi-Grow-Tent-Controller```
+- Run the following command ```chmod +x StartGrowController.sh``` to make the shell script executable 
 
 <h3>Sensor Package Installation Options</h3> 
 
@@ -116,7 +117,6 @@ This is the easier route, but could potentially cause system issues? I think? Id
 <h3>Usage</h3>
 
 - Once in the 'Raspberry-Pi-Grow-Tent-Controller' directory you'll the the GrowController.py file.
-- Run the following command ```chmod +x StartGrowController.sh``` to make the shell script executable 
 - Open the file by running ```nano GrowController.py```
 - Edit the temperature and humidity parameters along with the light schedule times and save when complete. (shown above in the examples)
 - The run ```python GrowController.py``` OR ```python3 GrowController.py``` if you have both Python2 and Python3 installed on your Pi.
