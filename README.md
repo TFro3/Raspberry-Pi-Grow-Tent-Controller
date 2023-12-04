@@ -17,7 +17,7 @@ All the grow tent controllers I've come across require you to use their fans, li
 Using components I already had laying around I created a controller that is easily configurable to your needs. Even if you have to purchase all items to build you'll still be saving money.
 
 > [!TIP]
-> You can also visit my forum post on this build for more in depth discussion, grow updates, and general inquiries at [Urban Hydro Gardening - DIY Raspberry Pi Grow Tent/Room Controller](https://urbanhydrogardening.com/threads/diy-raspberry-pi-grow-tent-room-controller.81/)
+> You can also visit my forum post on this build for more **in-depth documentation**, discussion, grow updates, and general inquiries at [Urban Hydro Gardening - DIY Raspberry Pi Grow Tent/Room Controller](https://urbanhydrogardening.com/threads/diy-raspberry-pi-grow-tent-room-controller.81/)
 
 <h3>You'll be able to control the following</h3>
 
