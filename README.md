@@ -31,6 +31,7 @@ Using components I already had laying around I created a controller that is easi
 
 
 <h3>For this project you will need the following</h3>
+
   - Raspberry Pi (I'm using a Raspberry Pi Zero W)
   - AM2303/DHT22 Temperature/Humidity Sensor
   - 10k Ohm Resistor (unless your AM2302/DHT22 has one built in. Mine has it built in so research the wiring diagram if you need to wire that resistor in)
