@@ -86,17 +86,19 @@ def get_humidity():
 def control_pump():
     while True:
         if pump_enabled:
-            GPIO.output(PUMP_PIN, GPIO.LOW)  # Turn on the pump relay
             timestamp = datetime.datetime.now().strftime("%Y-%m-%d %I:%M:%S %p")
             print(f"Current Pump Status:\nPump: \033[92mON\033[0m for {pump_runtime} seconds\nTimestamp: {timestamp}\n")
+            GPIO.output(PUMP_PIN, GPIO.LOW)  # Turn on the pump relay
             time.sleep(pump_runtime)  # Run the pump for the specified duration
             GPIO.output(PUMP_PIN, GPIO.HIGH)  # Turn off the pump relay
             timestamp = datetime.datetime.now().strftime("%Y-%m-%d %I:%M:%S %p")
             print(f"Current Pump Status:\nPump: \033[93mOFF\033[0m for {pump_interval} seconds\nTimestamp: {timestamp}\n")
-            time.sleep(pump_interval - pump_runtime)  # Wait for the remaining interval
+            time.sleep(pump_interval)  # Wait for the remaining interval
         else:
             timestamp = datetime.datetime.now().strftime("%Y-%m-%d %I:%M:%S %p")
-            time.sleep(60)  # Wait for 1 minute if the pump is disabled
+            print(f"Current Pump Status:\nPump: \033[91mOFF\033[0m\nTimestamp: {timestamp}\n")
+            time.sleep(60)  # Wait for a minute if the pump is disabled
+
 
 # Start the pump control loop in a separate thread
 pump_thread = threading.Thread(target=control_pump)
