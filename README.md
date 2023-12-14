@@ -184,7 +184,7 @@ Once the program is running you'll get print out statuses that look like the fol
 
 ![](images/pump_on.png)
 
-![](images/pump_off.pmg)
+![](images/pump_off.png)
 
 
 
