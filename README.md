@@ -8,6 +8,8 @@
 
 Raspberry Pi based grow controller for your grow tent/room. Utilizing temperature &amp; humidity sensor and relays to help automate grows and save you from having to buy another expensive device.
 
+![](images/618B1AE0-9490-41E6-890A-7DAB366E8907_4_5005_c.jpeg)
+
 <h3>The problem (for me) I'm solving:</h3>
 
 All the grow tent controllers I've come across require you to use their fans, lights, etc for everything to work out of the box OR purchase an additional adapter to convert their proprietary plugs to a standard outlet so you can use your own devices. 
@@ -211,6 +213,28 @@ Once the program is running you'll get print out statuses that look like the fol
 > **Liability Statement**
 >
 > - The creators or contributors of this project do not accept any liability or responsibility for any damages, accidents, injuries, or losses resulting from the use, misuse, or inability to use the information or instructions provided in this project. Users assume all risks associated with handling high voltage circuits and should exercise caution and expertise when working on such systems.
+
+<h3>Here are some build photos!</h3>
+
+Break off the tab to make each plug independent from each other on each outlet. Depending on your wiring config this could be the 'hot' or 'common' side.
+
+![](images/2023-12-04_09-36-40.png)
+
+![](images/E51E7DC2-D376-4182-885D-669E156474C6_1_105_c.jpeg)
+
+![](images/D951A850-F789-457C-984B-E8C5FE72F3AC_1_105_c.jpeg)
+
+![](images/B08DD90E-17F9-4CC3-A15F-E48A81E85FFE_1_105_c.jpeg)
+
+![](images/CA268140-73B1-4736-A23C-37C6AC57B29A_4_5005_c.jpeg)
+
+![](images/48CC7216-FA68-498C-A603-6341D5261E83_4_5005_c.jpeg)
+
+![](images/C68F9B60-E343-4C12-ACBC-947E583996F8_4_5005_c.jpeg)
+
+
+
+
 
 
 Have fun and enjoy!
