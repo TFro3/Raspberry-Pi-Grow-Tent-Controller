@@ -173,6 +173,17 @@ pump_enabled = True  # Change to True or False
 
 The save the file and you're all set!
 
+<h3>Images</h3>
+
+Once the program is running you'll get print out statuses that look like the following:
+
+
+![](images/relay_status.png)
+
+![](images/pump_on.png)
+
+![](images/pump_off.pmg)
+
 
 
 
