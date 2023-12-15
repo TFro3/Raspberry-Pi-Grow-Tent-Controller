@@ -220,15 +220,29 @@ Break off the tab to make each plug independent from each other on each outlet. 
 
 ![](images/2023-12-04_09-36-40.png)
 
+Then test fit the bank of 8 relays
+
 ![](images/E51E7DC2-D376-4182-885D-669E156474C6_1_105_c.jpeg)
+
+Routed in the cord that will be powering everything
 
 ![](images/D951A850-F789-457C-984B-E8C5FE72F3AC_1_105_c.jpeg)
 
+Wired in and installed all the outlets. 
+
+I put an extra outlet in the box that will provide constant power. This will be used for powering the Pi and the circulating fans inside the tent
+
 ![](images/B08DD90E-17F9-4CC3-A15F-E48A81E85FFE_1_105_c.jpeg)
+
+Mounted the Pi enclosure on the side of the electrical enclosure.
 
 ![](images/CA268140-73B1-4736-A23C-37C6AC57B29A_4_5005_c.jpeg)
 
+For now the sensor is mounted on the Pi enclosure. Later on I will use some Cat5e cable to add more length and add it to the center of the tent hanging from the top.
+
 ![](images/48CC7216-FA68-498C-A603-6341D5261E83_4_5005_c.jpeg)
+
+Now it's all wrapped up and ready for the first grow!
 
 ![](images/C68F9B60-E343-4C12-ACBC-947E583996F8_4_5005_c.jpeg)
 
