@@ -214,6 +214,7 @@ Once the program is running you'll get print out statuses that look like the fol
 >
 > - The creators or contributors of this project do not accept any liability or responsibility for any damages, accidents, injuries, or losses resulting from the use, misuse, or inability to use the information or instructions provided in this project. Users assume all risks associated with handling high voltage circuits and should exercise caution and expertise when working on such systems.
 
+
 <h3>Here are some build photos!</h3>
 
 I did a quick design and 3D printed an enclosure for a 4 gang electrical box
@@ -251,8 +252,20 @@ Now it's all wrapped up and ready for the first grow!
 ![](images/C68F9B60-E343-4C12-ACBC-947E583996F8_4_5005_c.jpeg)
 
 
-
-
+> [!CAUTION]
+> When picking out appliances/lights make sure you're keeping in mind the constraints of these relays and wiring.
+In my build the cord going to the box is only 16 gauge wiring which can handle 13 amps of power since the wire is less than 50'. This isn't an issue because the relays can only handle 10 amps. In my basement this will also be plugged into a GFCI outlet since this is dealing with water. I highly suggest you also plug into some sort of GFCI protected outlet. This circuit I'm using also has other items on it and is only a 15 amp circuit so if I came anywhere close the the 10 amps allotted I'd trip the breaker.
+>
+> When picking out the appliances make sure you're under calculated wattage for your setup.
+> 
+>To do this it's simply Amperage X Volts = Wattage
+>
+>So in this case my max amperage is 10 and its running on a 110v circuit so 10x110= 1,100 watts.
+>
+>I won't be needing a dehumidifier so I will be disabling that in the controller.
+>
+>*If you're planning on running every single available device in your setup you very well need 2 plugs going to your relay(s) and split the power going to the outlets with 2 completely separate circuits in your home.*
+With my pumps, lights, fans, humidifier, and small desk heater I'm totaling just under 800 watts which is probably the max I'd want to be at since there are motors involved in the appliances. Motors need a little more amperage when starting then consume their regular amperage after the initial startup.
 
 
 Have fun and enjoy!
