@@ -216,11 +216,15 @@ Once the program is running you'll get print out statuses that look like the fol
 
 <h3>Here are some build photos!</h3>
 
+I did a quick design and 3D printed an enclosure for a 4 gang electrical box
+
+![](images/4594B2B5-6120-4993-9901-534C3EB43E18_1_105_c.jpeg)
+
 Break off the tab to make each plug independent from each other on each outlet. Depending on your wiring config this could be the 'hot' or 'common' side.
 
 ![](images/2023-12-04_09-36-40.png)
 
-Then test fit the bank of 8 relays
+I secured the electrical box inside the 3d printed enclosure with a general adhesive, then test fit the bank of 8 relays
 
 ![](images/E51E7DC2-D376-4182-885D-669E156474C6_1_105_c.jpeg)
 
